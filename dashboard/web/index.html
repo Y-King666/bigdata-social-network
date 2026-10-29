@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>社交网络分析系统</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-live" viewBox="0 0 24 24"><path d="M3 12h4l2.5-7 5 14 2.5-7h4"/></symbol>
+    <symbol id="i-overview" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></symbol>
+    <symbol id="i-geo" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-topics" viewBox="0 0 24 24"><path d="M9 4 7 20M17 4l-2 16M4 9h16M3 15h16"/></symbol>
+    <symbol id="i-cascade" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7 8.3l4 7.4M17 8.3l-4 7.4"/></symbol>
+    <symbol id="i-influence" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="18" cy="9" r="2"/><path d="M17 14c2.8 0 5 2.2 5 5"/></symbol>
+    <symbol id="i-profile" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></symbol>
+    <symbol id="i-relations" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.1"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.1"/></symbol>
+    <symbol id="i-simulate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4Z"/></symbol>
+  </svg>
+
+  <div class="app">
+    <aside class="sidebar">
+      <nav class="nav" id="nav">
+        <div class="nav-group">实时监测</div>
+        <a href="/live" data-link data-route="/live"><svg><use href="#i-live"></use></svg><span>监测大屏</span></a>
+        <div class="nav-group">历史分析</div>
+        <a href="/overview" data-link data-route="/overview"><svg><use href="#i-overview"></use></svg><span>数据概览</span></a>
+        <a href="/geo" data-link data-route="/geo"><svg><use href="#i-geo"></use></svg><span>空间热点</span></a>
+        <a href="/topics" data-link data-route="/topics"><svg><use href="#i-topics"></use></svg><span>热点话题</span></a>
+        <a href="/cascade" data-link data-route="/cascade"><svg><use href="#i-cascade"></use></svg><span>传播分析</span></a>
+        <a href="/influence" data-link data-route="/influence"><svg><use href="#i-influence"></use></svg><span>影响力与社区</span></a>
+        <a href="/profile" data-link data-route="/profile"><svg><use href="#i-profile"></use></svg><span>用户画像查询</span></a>
+        <a href="/relations" data-link data-route="/relations"><svg><use href="#i-relations"></use></svg><span>关系发现</span></a>
+        <a href="/simulate" data-link data-route="/simulate"><svg><use href="#i-simulate"></use></svg><span>传播模拟</span></a>
+      </nav>
+      <div class="sidebar-foot">
+        <strong>社交网络分析系统</strong>
+        <span>Weibo-COV · 新冠疫情微博数据</span>
+      </div>
+    </aside>
+    <main class="main">
+      <div id="view" class="view">
+        <div class="app-loading"><span class="spinner"></span>正在加载页面…</div>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

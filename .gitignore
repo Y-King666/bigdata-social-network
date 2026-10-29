@@ -1,0 +1,36 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Raw and derived data
+data/
+output/
+
+# Local Spark/Hadoop runtime
+hadoop/
+spark-tmp/
+
+# Streaming runtime state
+stream/checkpoint/
+stream/spool/
+stream/hot/
+stream/logs/
+stream/state.json
+stream/ack.json
+
+# Dashboard runtime logs
+dashboard/*.log
+*.log
+
+# Local scratch files
+_*.py
+marker.txt
+*.tmp
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
